@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/studio"],
       },
     ],
-    sitemap: `${process.env.VERCEL_PROJECT_PRODUCTION_URL}/sitemap.xml`,
+    sitemap: `${process.env.NEXT_PUBLIC_SITE_BASE_URL}/sitemap.xml`,
   };
 }
