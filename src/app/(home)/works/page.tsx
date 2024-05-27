@@ -12,8 +12,7 @@ export const metadata: Metadata = {
   bilərsiniz. 📩`,
   openGraph: {
     title: "Aziz Imranzade | Layihələr",
-    url: `${process.env.VERCEL_PROJECT_PRODUCTION_URL}/works`,
-    type: "website",
+    url: `${process.env.NEXT_PUBLIC_SITE_BASE_URL}/works`,
   },
 };
 const Blog = async () => {

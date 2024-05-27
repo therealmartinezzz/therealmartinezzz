@@ -22,9 +22,16 @@ import { Metadata } from "next";
 import { SanityAsset } from "@sanity/image-url/lib/types/types";
 export const metadata: Metadata = {
   title: "Aziz Imranzade | Ana Səhifə",
-
   description:
     "Mən Aziz İmranzadə. Kod yazmağı sevirəm. Uşaqlıqdan kod yazmaq macərasına atılmışam və bu mənim üçün bir yaşam tərzinə çevrilib. Bu web səhifədə mənim haqqımda məlumat əldə edə, mənimlə əlaqə saxlaya, hazırladığım layhilərə baxa və bloq yazılarımı oxuya bilərsiniz.",
+  openGraph: {
+    title:'Aziz Imranzade | @thisisaziz',
+    description: "Aziz Imranzade | Software Developer",
+    url:`${process.env.NEXT_PUBLIC_SITE_BASE_URL}`
+  },
+  alternates: {
+    canonical: process.env.NEXT_PUBLIC_SITE_BASE_URL,
+  },
 };
 const Home = async () => {
   const blogPostsQuery: string = `*[_type=='post'][0...2] | order(publishedAt desc) {
@@ -102,7 +109,6 @@ const Home = async () => {
   const works: PostObject[] = await getSanityData(worksQuery);
   const images: { galleryImage: SanityAsset; alt: string }[] =
     await getSanityData(galleryQuery);
-  console.log(images);
   return (
     <main className="w-full h-full  mt-12 text-white/80 sm:pb-20 flex flex-col  gap-y-14">
       <section className="h-auto  w-full flex sm:flex-row flex-col-reverse  justify-between sm:items-center gap-y-6 sm:gap-y-0 gap-x-4 ">

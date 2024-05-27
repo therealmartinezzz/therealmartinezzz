@@ -57,13 +57,14 @@ const About = async () => {
   };
   return (
     <main className="w-full min-h-screen flex flex-col text-white space-y-8">
-      <div className="flex  w-full   justify-between h-12 items-center mt-8">
+      <div className="flex  w-full   justify-between h-12 items-center mt-8 sm:gap-x-0 gap-x-4 ">
         <User
           name={author.name}
+          className=" flex-shrink-0"
           description={moment(singlePostData[0].publishedAt).format("lll")}
           avatarProps={{ src: urlForImage(author.image) }}
         />
-        <h1 className="text-lg text-white/80 font-[500]">
+        <h1 className="sm:text-lg text-base text-white/80 font-[500] text-right">
           {singlePostData[0].title}
         </h1>
       </div>

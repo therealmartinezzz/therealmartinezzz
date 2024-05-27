@@ -11,6 +11,7 @@ const poppins = Poppins({
 });
 export const revalidate = 30;
 export const metadata: Metadata = {
+  metadataBase: new URL(`https://azizimranzade.vercel.app`),
   title: {
     template: "Aziz Imranzade | %s",
     default: "Aziz Imranzade",
@@ -19,15 +20,15 @@ export const metadata: Metadata = {
     google: "QaFeUPdzocJ9V0DyWHbaA2Uv3RVGoXlPJicoi58xZVE",
   },
   alternates: {
-    canonical: process.env.VERCEL_PROJECT_PRODUCTION_URL,
+    canonical: process.env.NEXT_PUBLIC_SITE_BASE_URL,
   },
   description:
-    "Mən Aziz İmranzadə. Uşaqlıqdan kod yazmaq macərasına atılmışam və bu mənim üçün bir yaşam tərzinə çevrilib.",
+    "Mən Aziz Imranzade. Uşaqlıqdan kod yazmaq macərasına atılmışam və bu mənim üçün bir yaşam tərzinə çevrilib.",
   openGraph: {
     type: "website",
     title: "Aziz Imranzade Ana Səhifə",
     description: "Software Developer",
-    url: process.env.VERCEL_PROJECT_PRODUCTION_URL,
+    url: process.env.NEXT_PUBLIC_SITE_BASE_URL,
   },
 };
 export default function RootLayout({
@@ -36,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="tr">
       <body
         className={`${poppins.className} bg-[#111010]  sm:py-8 py-4  overflow-auto h-full min-h-screen dark sm:px-[24rem] px-4`}
       >

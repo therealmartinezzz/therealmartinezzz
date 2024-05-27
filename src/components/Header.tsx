@@ -51,7 +51,7 @@ const Header = () => {
   return (
     <header className="w-full h-14 flex items-center text-white justify-between overflow-visible ">
       <Link href={"/"} className="font-mono text-lg">
-        Aziz Imranzade
+        Aziz İmranzadə
       </Link>
       <ul className="sm:flex hidden gap-x-6 ">
         {menu.map((item, index) => (
@@ -81,7 +81,7 @@ const Header = () => {
           isOpen={isOpen}
           size="full"
           onOpenChange={onOpenChange}
-          className="text-white"
+          className="text-white  bg-[#111010]"
         >
           <ModalContent>
             {(onClose) => (
@@ -93,7 +93,7 @@ const Header = () => {
                       onClose();
                     }}
                   >
-                    Aziz Imranzade
+                    Aziz İmranzadə
                   </Link>
                   <IoIosClose
                     className="text-2xl"

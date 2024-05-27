@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   dünyasını kəşf etmək üçün mənə qoşulun! 🚀`,
   openGraph: {
     type: "website",
-    title: "Aziz Imranzade | Blog",
-    url: `${process.env.VERCEL_PROJECT_PRODUCTION_URL}/blog`,
+    title: "Aziz İmranzade | Blog",
+    url: `${process.env.NEXT_PUBLIC_SITE_BASE_URL}/blog`,
   },
 };
 const Blog = async () => {

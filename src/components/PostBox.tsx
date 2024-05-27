@@ -23,11 +23,11 @@ const PostBox: FC<BlogPostProps> = async ({ post, href }) => {
         </div>
       </CardBody>
       <CardFooter className="pb-0 pt-2 px-4 flex-col items-start mb-4">
-        <h1 className="font-bold  text-lg break-words w-full text-white/80">
+        <h2 className="font-bold  text-lg break-words w-full text-white/80">
           <Link color="primary" href={href}>
             {post.title}
           </Link>
-        </h1>
+        </h2>
 
         <small className="text-default-500">
           {moment(post.publishedAt).fromNow()}
