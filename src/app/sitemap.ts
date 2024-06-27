@@ -2,6 +2,7 @@ import { PostObject } from "@/models/types";
 import { client } from "@/sanity/lib/client";
 import { MetadataRoute } from "next";
 
+export const revalidate = 3600;
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogQuery = `*[_type=='post']{
     'slug': slug.current
