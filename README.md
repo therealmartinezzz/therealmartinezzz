@@ -1,4 +1,4 @@
-<h2 align="left">Hello I Am Aziz Imranzade 👋</h2>
+<h2 align="left">Hello I Am David Martinez 👋</h2>
 
 ###
 
@@ -6,7 +6,7 @@
 
 ###
 
-<p align="left">Hello everyone, I am Aziz Imranzade. I currently live in Azerbaijan. I am developing myself in the web field. Since childhood, coding is one of my favorite things in life. I also love making personal development videos on my YouTube channel</p>
+<p align="left">Hello everyone, I am David Martinez. I currently live in Azerbaijan. I am developing myself in the web field. Since childhood, coding is one of my favorite things in life. I also love making personal development videos on my YouTube channel</p>
 
 ###
 
