@@ -1,66 +1,49 @@
-<h2 align="left">Hello I Am David Martinez 👋</h2>
+# Hi there! I'm David Martinez ✨
 
-###
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=5F9EA0&width=435&lines=Web+Developer+%7C+Self-Taught+Coder;Problem+Solver+%7C+Tech+Enthusiast;Lifelong+Learner+%7C+Traveler)
 
-<h2 align="left">✨ About Me</h2>
+---
 
-###
+## About Me
+Hi, I’m **David Martinez**, a **self-taught web developer** who has been writing code since I was 11. I’m passionate about creating innovative solutions and exploring new technologies. When I’m not coding, you’ll find me traveling, playing story-driven video games, or diving into exciting new challenges.
 
-<p align="left">
-  Hi, I’m David Martinez, a self-taught web developer with a passion for building creative and efficient solutions using the latest tech stacks. I’ve been writing code since I was 11, constantly driven by curiosity and the desire to learn something new every day.
+### My Tech Stack
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
+![ShadCN](https://img.shields.io/badge/ShadCN-4A5568?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 
-I specialize in creating dynamic, user-friendly digital experiences, and I enjoy tackling challenges with innovative thinking. Beyond coding, I’m a big fan of story-driven video games, traveling to new places, and exploring emerging technologies.
-</p>
+---
 
-###
+## GitHub Stats
 
-<h2 align="left">⚛️ Tech Stack</h2>
+[![David's GitHub stats](https://github-readme-stats.vercel.app/api?username=YourUsername&show_icons=true&theme=radical)](https://github-readme-stats.vercel.app/api?username=therealmartinezzz&theme=onedark&show_icons=true&hide_border=true&count_private=true)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=YourUsername&layout=compact&theme=radical)](https://github-readme-streak-stats.herokuapp.com/?user=therealmartinezzz&theme=onedark&hide_border=true)
+[![GitHub Streak](https://streak-stats.demolab.com?user=YourUsername&theme=radical&hide_border=true)](https://github-readme-stats.vercel.app/api/top-langs/?username=therealmartinezzz&theme=onedark&show_icons=true&hide_border=true&layout=compact)
 
-###
+---
 
-<div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="30" alt="html5 logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="30" alt="css3 logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="30" alt="typescript logo"  />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=tailwind" height="30" alt="tailwindcss logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="30" alt="react logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" height="30" alt="nextjs logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" height="30" alt="firebase logo"  />
-</div>
+## Let’s Connect
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/david-martinez-701118344/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-24292F?style=for-the-badge&logo=githubpages&logoColor=white)](https://therealmartinezzz.vercel.app)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:the.real.martinezzz@gmail.com)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/therealmrtnz)
 
-###
+---
 
-<h2 align="left">💌 Social Media & Contact</h2>
+### Fun Facts
+- 🚀 I started coding at the age of 11.
+- ✈️ I’ve traveled to over X countries.
+- 🎮 Story-driven games are my favorite.
+- 🔄 I’m always experimenting with new frameworks and tools.
+- ❤️‍🔥 Spending time with my family is the best thing in the world
+- 👽 I love watching sc-fi genre movies
 
-###
-
-<div align="left">
-  <a href="https://www.youtube.com/channel/UCqZjN-nHNqC9uv9GThiRy8g" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="youtube logo"  />
-  </a>
-  <a href="https://www.linkedin.com/in/david-martinez-701118344" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" height="35" alt="youtube logo"  />
-  </a>
-    <a href="mailto:the.real.martinezzz@gmail.com" target="_blank">
-      <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo"  />
-  </a>
-</div>
-
-###
-
-<h2 align="left">📈 Github Stats</h2>
-
-###
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=therealmartinezzz&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false&order=1" height="150" alt="stats graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=therealmartinezzz&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&order=2" height="150" alt="languages graph"  />
-</div>
+Feel free to explore my projects and reach out if you’d like to collaborate!
