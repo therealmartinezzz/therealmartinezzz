@@ -6,7 +6,11 @@
 
 ###
 
-<p align="left">Hello everyone, I am David Martinez. I currently live in Azerbaijan. I am developing myself in the web field. Since childhood, coding is one of my favorite things in life. I also love making personal development videos on my YouTube channel</p>
+<p align="left">
+  Hi, I’m David Martinez, a self-taught web developer with a passion for building creative and efficient solutions using the latest tech stacks. I’ve been writing code since I was 11, constantly driven by curiosity and the desire to learn something new every day.
+
+I specialize in creating dynamic, user-friendly digital experiences, and I enjoy tackling challenges with innovative thinking. Beyond coding, I’m a big fan of story-driven video games, traveling to new places, and exploring emerging technologies.
+</p>
 
 ###
 
