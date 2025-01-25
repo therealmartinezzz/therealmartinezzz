@@ -24,9 +24,9 @@ Hi, I’m **David Martinez**, a **self-taught web developer** who has been writi
 
 ## GitHub Stats
 
-[![David's GitHub stats](https://github-readme-stats.vercel.app/api?username=YourUsername&show_icons=true&theme=radical)](https://github-readme-stats.vercel.app/api?username=therealmartinezzz&theme=onedark&show_icons=true&hide_border=true&count_private=true)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=YourUsername&layout=compact&theme=radical)](https://github-readme-streak-stats.herokuapp.com/?user=therealmartinezzz&theme=onedark&hide_border=true)
-[![GitHub Streak](https://streak-stats.demolab.com?user=YourUsername&theme=radical&hide_border=true)](https://github-readme-stats.vercel.app/api/top-langs/?username=therealmartinezzz&theme=onedark&show_icons=true&hide_border=true&layout=compact)
+![David's GitHub stats](https://github-readme-stats.vercel.app/api?username=therealmartinezzz&theme=onedark&show_icons=true&hide_border=true&count_private=true)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=therealmartinezzz&theme=onedark&show_icons=true&hide_border=true&layout=compact)
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=therealmartinezzz&theme=onedark&hide_border=true)
 
 ---
 
