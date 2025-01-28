@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   dünyasını kəşf etmək üçün mənə qoşulun! 🚀`,
   openGraph: {
     type: "website",
-    title: "Aziz İmranzade | Blog",
+    title: "David Martinez | Blog",
     url: `${process.env.NEXT_PUBLIC_SITE_BASE_URL}/blog`,
   },
 };

@@ -15,7 +15,7 @@ interface PostObjectProps {
 export async function generateMetadata({
   params: { slug },
 }: PostObjectProps): Promise<Metadata> {
-  const query = `*[_type=='post' && slug.current == 'aziz-imranzade-kimdir']`;
+  const query = `*[_type=='post' && slug.current == 'david-martinez-kimdir']`;
 
   const singlePostData: SinglePostObject[] = await getSanityData(query);
   return {
@@ -36,7 +36,7 @@ export async function generateMetadata({
   };
 }
 const About = async () => {
-  const query = `*[_type=='post' && slug.current == 'aziz-imranzade-kimdir']`;
+  const query = `*[_type=='post' && slug.current == 'david-martinez-kimdir']`;
   const singlePostData: SinglePostObject[] = await getSanityData(query);
   const author: authorObj = await getAuthor();
   interface Props {

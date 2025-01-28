@@ -12,15 +12,15 @@ const Footer = () => {
   const socials: { icon: ReactNode; url: string }[] = [
     {
       icon: <FiYoutube />,
-      url: "https://www.youtube.com/channel/UCpmg3fkRSA5vyI9CtViMdww",
+      url: "https://www.youtube.com/@therealmartinezzz",
     },
     {
       icon: <FiTwitter />,
-      url: "https://x.com/thisisazizzz",
+      url: "https://x.com/therealmrtnz",
     },
     {
       icon: <FiGithub />,
-      url: "https://github.com/AzizImranzade",
+      url: "https://github.com/therealmartinezzz",
     },
     {
       icon: <FiLinkedin />,
@@ -30,7 +30,7 @@ const Footer = () => {
   return (
     <footer className="text-white items-center flex justify-between gap-x-4 mt-10">
       <p className="sm:text-sm text-xs text-white/70">
-        © {new Date().getFullYear()} Aziz Imranzadə. Bütün Hüquqlar qorunur
+        © {new Date().getFullYear()} David Martinez. Bütün Hüquqlar qorunur
       </p>
       <div className="flex  gap-x-4">
         {socials.map((social, key) => (

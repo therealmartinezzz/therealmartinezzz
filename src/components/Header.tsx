@@ -51,7 +51,7 @@ const Header = () => {
   return (
     <header className="w-full h-14 flex items-center text-white justify-between overflow-visible ">
       <Link href={"/"} className="font-mono text-lg">
-        Aziz İmranzadə
+        David Martinez
       </Link>
       <ul className="sm:flex hidden gap-x-6 ">
         {menu.map((item, index) => (
@@ -93,7 +93,7 @@ const Header = () => {
                       onClose();
                     }}
                   >
-                    Aziz İmranzadə
+                    David Martinez
                   </Link>
                   <IoIosClose
                     className="text-2xl"

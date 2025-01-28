@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   bir layihə üçün təklif istəmək istəyirsinizsə, mənimlə əlaqə saxlaya
   bilərsiniz. 📩`,
   openGraph: {
-    title: "Aziz Imranzade | Layihələr",
+    title: "David Martinez | Layihələr",
     url: `${process.env.NEXT_PUBLIC_SITE_BASE_URL}/works`,
   },
 };

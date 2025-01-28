@@ -21,12 +21,12 @@ import { urlForImage } from "@/sanity/lib/image";
 import { Metadata } from "next";
 import { SanityAsset } from "@sanity/image-url/lib/types/types";
 export const metadata: Metadata = {
-  title: "Aziz Imranzade | Ana Səhifə",
+  title: "David Martinez | Ana Səhifə",
   description:
     "Mən Aziz İmranzadə. Kod yazmağı sevirəm. Uşaqlıqdan kod yazmaq macərasına atılmışam və bu mənim üçün bir yaşam tərzinə çevrilib. Bu web səhifədə mənim haqqımda məlumat əldə edə, mənimlə əlaqə saxlaya, hazırladığım layhilərə baxa və bloq yazılarımı oxuya bilərsiniz.",
   openGraph: {
-    title:'Aziz Imranzade | @thisisaziz',
-    description: "Aziz Imranzade | Software Developer",
+    title:'David Martinez | @thisisaziz',
+    description: "David Martinez | Software Developer",
     url:`${process.env.NEXT_PUBLIC_SITE_BASE_URL}`
   },
   alternates: {
@@ -126,7 +126,7 @@ const Home = async () => {
         <div className=" flex-shrink-0 h-40 w-40 overflow-hidden relative rounded-md">
           <Image
             src={urlForImage(author.image)}
-            alt="Aziz Imranzade Avatar"
+            alt="David Martinez Avatar"
             fill
             className=" w-full h-full object-cover"
           />
@@ -179,7 +179,7 @@ const Home = async () => {
             <Image
               src={urlForImage(images[0].galleryImage)}
               fill
-              alt={images[0].alt || "Aziz Imranzade"}
+              alt={images[0].alt || "David Martinez"}
               className="object-cover"
             />
           </div>
@@ -187,7 +187,7 @@ const Home = async () => {
             <Image
               src={urlForImage(images[1].galleryImage)}
               fill
-              alt={images[1].alt || "Aziz Imranzade"}
+              alt={images[1].alt || "David Martinez"}
               className="object-cover"
             />
           </div>
@@ -195,7 +195,7 @@ const Home = async () => {
             <Image
               src={urlForImage(images[2].galleryImage)}
               fill
-              alt={images[2].alt || "Aziz Imranzade"}
+              alt={images[2].alt || "David Martinez"}
               className="object-cover"
             />
           </div>
@@ -203,7 +203,7 @@ const Home = async () => {
             <Image
               src={urlForImage(images[3].galleryImage)}
               fill
-              alt={images[3].alt || "Aziz Imranzade"}
+              alt={images[3].alt || "David Martinez"}
               className="object-cover"
             />
           </div>
@@ -211,7 +211,7 @@ const Home = async () => {
             <Image
               src={urlForImage(images[4].galleryImage)}
               fill
-              alt={images[4].alt || "Aziz Imranzade"}
+              alt={images[4].alt || "David Martinez"}
               className="object-cover"
             />
           </div>
@@ -219,7 +219,7 @@ const Home = async () => {
             <Image
               src={urlForImage(images[5].galleryImage)}
               fill
-              alt={images[5].alt || "Aziz Imranzade"}
+              alt={images[5].alt || "David Martinez"}
               className="object-cover"
             />
           </div>

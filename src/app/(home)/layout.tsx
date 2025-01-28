@@ -11,10 +11,10 @@ const poppins = Poppins({
 });
 export const revalidate = 30;
 export const metadata: Metadata = {
-  metadataBase: new URL(`https://azizimranzade.vercel.app`),
+  metadataBase: new URL(`https://therealmartinezzz.vercel.app`),
   title: {
-    template: "Aziz Imranzade | %s",
-    default: "Aziz Imranzade",
+    template: "David Martinez | %s",
+    default: "David Martinez",
   },
   verification: {
     google: "QaFeUPdzocJ9V0DyWHbaA2Uv3RVGoXlPJicoi58xZVE",
@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     canonical: process.env.NEXT_PUBLIC_SITE_BASE_URL,
   },
   description:
-    "Mən Aziz Imranzade. Uşaqlıqdan kod yazmaq macərasına atılmışam və bu mənim üçün bir yaşam tərzinə çevrilib.",
+    "Mən David Martinez. Uşaqlıqdan kod yazmaq macərasına atılmışam və bu mənim üçün bir yaşam tərzinə çevrilib.",
   openGraph: {
     type: "website",
-    title: "Aziz Imranzade Ana Səhifə",
+    title: "David Martinez Ana Səhifə",
     description: "Software Developer",
     url: process.env.NEXT_PUBLIC_SITE_BASE_URL,
   },
