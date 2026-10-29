@@ -1,0 +1,46 @@
+---
+import { getCollection, render } from 'astro:content';
+import Esas from '../../layouts/Esas.astro';
+import { tarixYaz } from '../../tarix';
+
+export async function getStaticPaths() {
+  const yazilar = await getCollection('yazilar');
+  return yazilar.map((yazi) => ({ params: { id: yazi.id }, props: { yazi } }));
+}
+
+const { yazi } = Astro.props;
+const { Content } = await render(yazi);
+---
+
+<Esas basliq={yazi.data.basliq}>
+  <a href="/" class="geri">← Geri</a>
+  <h1>{yazi.data.basliq}</h1>
+  <p class="tarix">{tarixYaz(yazi.data.tarix)}</p>
+  <article>
+    <Content />
+  </article>
+</Esas>
+
+<style>
+  .geri {
+    display: inline-block;
+    margin-bottom: 2.5rem;
+    color: var(--solgun);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .geri:hover {
+    color: var(--parlaq);
+  }
+
+  h1 {
+    margin-bottom: 0.3rem;
+  }
+
+  .tarix {
+    color: var(--solgun);
+    font-size: 0.85rem;
+    margin: 0 0 2.5rem;
+  }
+</style>

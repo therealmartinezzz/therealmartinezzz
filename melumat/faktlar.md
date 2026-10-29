@@ -1,0 +1,10 @@
+- 13 yaşımdan kod yazıram.
+- Çətin şeyləri sevirəm.
+- Az danışıb daha çox fokuslanmağa çalışıram.
+- Hədəfim təzyiq altında dağ kimi sakit qalmaqdır.
+- Özümü SaaS, startap və proqramlaşdırma dünyasında görürəm.
+- Məni ən çox azadlıq motivasiya edir: maddi, mənəvi və məkan azadlığı.
+- Həyatımda ən çox uğura önəm verirəm.
+- Ən sevdiyim anime Cyberpunk: Edgerunners-dir. Saytdakı şəkillər də ordandır.
+- Qaçmaq üçün ən yaxşı hava buludlu və sərin havadır.
+- Otağımı yığışdırmaq və uzun duş qəbul etmək mənim üçün ən yaxşı istirahətdir.

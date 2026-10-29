@@ -1,0 +1,144 @@
+---
+// Sağ tərəfdəki dik kart: public/sehneler qovluğundakı bütün şəkillər
+// fayl adına görə sıralanır və 4 saniyədən bir dəyişir.
+import fs from 'node:fs';
+import path from 'node:path';
+import { getEntry } from 'astro:content';
+
+const sitat = (await getEntry('melumat', 'bio'))?.data.sitat;
+
+const qovluq = path.join(process.cwd(), 'public', 'sehneler');
+const sekiller = fs.existsSync(qovluq)
+  ? fs
+      .readdirSync(qovluq)
+      .filter((fayl) => /\.(jpe?g|png|webp|avif|gif)$/i.test(fayl))
+      .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+      .map((fayl) => `/sehneler/${encodeURIComponent(fayl)}`)
+  : [];
+---
+
+{
+  sekiller.length > 0 && (
+    <figure class="sehne" data-slayd>
+      <div class="kart">
+        {sekiller.map((src, i) => <img src={src} alt="" class:list={{ aktiv: i === 0 }} />)}
+      </div>
+      <figcaption class="imza">
+        {sitat && <q>{sitat}</q>}
+        <span class="nisan" title="Edgerunner" aria-hidden="true"><span /></span>
+      </figcaption>
+    </figure>
+  )
+}
+
+<script>
+  const sehne = document.querySelector<HTMLElement>('[data-slayd]');
+  const say = sehne?.querySelectorAll('.kart img').length ?? 0;
+
+  if (sehne && say > 1) {
+    let indi = 0;
+    let dayan = false;
+    sehne.addEventListener('mouseenter', () => (dayan = true));
+    sehne.addEventListener('mouseleave', () => (dayan = false));
+
+    setInterval(() => {
+      if (dayan || document.hidden) return;
+      indi = (indi + 1) % say;
+      sehne.querySelectorAll('.kart img').forEach((img, i) => img.classList.toggle('aktiv', i === indi));
+    }, 4000);
+  }
+</script>
+
+<style>
+  /* Yalnız geniş ekranda, sağda dik kart kimi görünür */
+  .sehne {
+    display: none;
+  }
+
+  @media (min-width: 960px) {
+    .sehne {
+      display: block;
+      position: sticky;
+      top: 72px;
+      flex: 0 0 auto;
+      /* Ekranın hündürlüyünə (altdakı nişanla birlikdə) sığsın deyə en hündürlüyə görə məhdudlaşır */
+      width: min(clamp(300px, 31vw, 640px), calc((100vh - 200px) * 4 / 5));
+      aspect-ratio: 4 / 5;
+      margin: 0;
+    }
+  }
+
+  /* Kartın ətrafında çox zəif, sabit işıq */
+  .kart {
+    position: absolute;
+    inset: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.06),
+      0 0 48px rgba(255, 255, 255, 0.05);
+  }
+
+  /* Kartın altında: solda sitat, sağda Edgerunners nişanı */
+  .imza {
+    position: absolute;
+    top: calc(100% + 14px);
+    left: 4px;
+    right: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  q {
+    color: var(--solgun);
+    font-size: 0.85rem;
+    font-style: italic;
+    line-height: 1.5;
+    quotes: '“' '”';
+  }
+
+  .nisan span {
+    display: block;
+    height: 40px;
+    aspect-ratio: 255 / 432;
+    background: var(--solgun);
+    mask: url('/edgerunner.png') center / contain no-repeat;
+    -webkit-mask: url('/edgerunner.png') center / contain no-repeat;
+    transition: background 0.2s;
+  }
+
+  .sehne:hover .nisan span {
+    background: #f2e40c;
+  }
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+  }
+
+  img.aktiv {
+    opacity: 1;
+  }
+
+  /* Aktiv şəkil yavaşca yaxınlaşır */
+  .kart img.aktiv {
+    animation: yaxinlas 6s ease-out forwards;
+  }
+
+  @keyframes yaxinlas {
+    from { transform: scale(1); }
+    to { transform: scale(1.06); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    img { transition: none; }
+    .kart img.aktiv { animation: none; }
+  }
+</style>

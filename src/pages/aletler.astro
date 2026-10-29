@@ -1,0 +1,61 @@
+---
+import { getEntry, render } from 'astro:content';
+import Esas from '../layouts/Esas.astro';
+
+const aletler = await getEntry('melumat', 'aletler');
+const { Content } = await render(aletler!);
+---
+
+<Esas basliq="Alətlərim">
+  <a href="/" class="geri">← Geri</a>
+  <h1>Alətlərim</h1>
+  <article>
+    <Content />
+  </article>
+</Esas>
+
+<style>
+  .geri {
+    display: inline-block;
+    margin-bottom: 2.5rem;
+    color: var(--solgun);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .geri:hover {
+    color: var(--parlaq);
+  }
+
+  /* Əsas hissələr (Avadanlıq, Proqramlar) */
+  article :global(h2) {
+    font-size: 1.3rem;
+    margin-top: 3.5rem;
+  }
+
+  /* Proqramların alt qrupları: kiçik, solğun etiket kimi */
+  article :global(h3) {
+    color: var(--solgun);
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 2rem 0 0.25rem;
+  }
+
+  article :global(ul) {
+    list-style: none;
+    padding: 0;
+  }
+
+  article :global(li) {
+    padding: 0.5rem 0;
+    margin: 0;
+    border-bottom: 1px solid var(--xett);
+  }
+
+  article :global(strong) {
+    color: var(--parlaq);
+    font-weight: 600;
+  }
+</style>

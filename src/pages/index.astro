@@ -1,0 +1,225 @@
+---
+import { getCollection, getEntry, render } from 'astro:content';
+import Esas from '../layouts/Esas.astro';
+import Ikon from '../components/Ikon.astro';
+import Sehne from '../components/Sehne.astro';
+import SonVideo from '../components/SonVideo.astro';
+import { tarixYaz } from '../tarix';
+
+const bio = await getEntry('melumat', 'bio');
+const layiheler = await getEntry('melumat', 'layiheler');
+const elaqe = await getEntry('melumat', 'elaqe');
+const faktlar = await getEntry('melumat', 'faktlar');
+
+const { Content: Bio } = await render(bio!);
+const { Content: Layiheler } = await render(layiheler!);
+const Faktlar = faktlar ? (await render(faktlar)).Content : null;
+
+const yazilar = (await getCollection('yazilar')).sort(
+  (a, b) => b.data.tarix.valueOf() - a.data.tarix.valueOf(),
+);
+---
+
+<Esas genis>
+  <div class="mezmun">
+  <header class="bas">
+    {bio!.data.sekil && <img src={bio!.data.sekil} alt="" width="72" height="72" />}
+    <div>
+      <h1>{bio!.data.ad}</h1>
+      {bio!.data.istifadeci && <p class="istifadeci">{bio!.data.istifadeci}</p>}
+    </div>
+    {bio!.data.indi && <p class="indi">{bio!.data.indi}</p>}
+  </header>
+
+  <section class="bio">
+    <Bio />
+  </section>
+
+  <nav class="kecidler">
+    <a href="/aletler/">İstifadə etdiyim alətlər <span>→</span></a>
+  </nav>
+
+  <SonVideo />
+
+  <h2>Layihələr</h2>
+  <Layiheler />
+
+  {
+    Faktlar && (
+      <>
+        <h2>Haqqımda maraqlı faktlar</h2>
+        <div class="faktlar">
+          <Faktlar />
+        </div>
+      </>
+    )
+  }
+
+  {
+    yazilar.length > 0 && (
+      <>
+        <h2>Yazılar</h2>
+        <ul class="yazilar">
+          {yazilar.map((yazi) => (
+            <li>
+              <a href={`/yazilar/${yazi.id}/`}>{yazi.data.basliq}</a>
+              <span>{tarixYaz(yazi.data.tarix)}</span>
+            </li>
+          ))}
+        </ul>
+      </>
+    )
+  }
+
+  <h2>Əlaqə</h2>
+  <ul class="elaqe">
+    {
+      (elaqe?.data.linkler ?? []).map((link) => (
+        <li>
+          <a href={link.url} target={link.url.startsWith('http') ? '_blank' : undefined} rel="noopener">
+            <Ikon url={link.url} />
+            {link.ad}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  </div>
+
+  <Sehne />
+</Esas>
+
+<style>
+  .bas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .bas img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: grayscale(100%);
+  }
+
+  .bas h1 {
+    margin: 0;
+    font-size: clamp(1.3rem, 6vw, 1.75rem);
+    overflow-wrap: anywhere;
+  }
+
+  .istifadeci {
+    margin: 0.1rem 0 0;
+    color: var(--solgun);
+    font-size: 1rem;
+  }
+
+  .indi {
+    margin: 0 0 0 auto;
+    color: var(--solgun);
+    font-size: 0.9rem;
+    font-style: italic;
+    white-space: nowrap;
+  }
+
+  /* Faktlar: 01, 02, 03... nömrələri ilə */
+  .faktlar :global(ul) {
+    list-style: none;
+    padding: 0;
+    counter-reset: fakt;
+  }
+
+  .faktlar :global(li) {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    counter-increment: fakt;
+  }
+
+  .faktlar :global(li)::before {
+    content: counter(fakt, decimal-leading-zero);
+    color: var(--solgun);
+    font-size: 0.8rem;
+    padding-top: 0.25rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Bio-nun altında digər səhifələrə keçidlər */
+  .kecidler {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin-top: 1.25rem;
+  }
+
+  .kecidler a {
+    font-size: 0.95rem;
+  }
+
+  .kecidler span {
+    display: inline-block;
+    color: var(--solgun);
+    transition: transform 0.2s;
+  }
+
+  .kecidler a:hover span {
+    transform: translateX(3px);
+  }
+
+  .elaqe {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.6rem;
+  }
+
+  .elaqe li {
+    margin: 0;
+  }
+
+  .elaqe a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--metn);
+    text-decoration: none;
+  }
+
+  .elaqe a:hover {
+    color: var(--parlaq);
+  }
+
+  .yazilar {
+    list-style: none;
+    padding: 0;
+  }
+
+  .yazilar li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.55rem 0;
+    margin: 0;
+    border-bottom: 1px solid var(--xett);
+  }
+
+  .yazilar a {
+    text-decoration: none;
+  }
+
+  .yazilar a:hover {
+    text-decoration: underline;
+  }
+
+  .yazilar span {
+    color: var(--solgun);
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+</style>
